@@ -8,4 +8,5 @@ export interface Clan {
     wood: number;
     food: number;
     gold: number;
+    defeatedBy: ClanId | null;
 }
