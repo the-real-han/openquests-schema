@@ -27,6 +27,7 @@ export interface Player {
         titles: string[];
         backstory: string;
     };
+    message: string;
     status: {
         alive: boolean;
     };
