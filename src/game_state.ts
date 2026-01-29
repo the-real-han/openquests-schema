@@ -16,6 +16,5 @@ export interface GameState {
 // Result of a processed daily tick
 export interface TickResult {
     newState: GameState;
-    playerResults: Record<string, string>; // playerId -> message
     narrativeSummary: string;
 }
