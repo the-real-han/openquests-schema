@@ -1,3 +1,5 @@
+import { ClanId } from "./clan";
+
 export const PLAYER_CLASSES = [
     'Warrior',
     'Lancer',
@@ -19,15 +21,33 @@ export interface Player {
     character: {
         name: string;
         class: PlayerClass;
-        title: string;
+        level: number;
+        xp: number;
+        clanId: ClanId;
+        titles: string[];
         backstory: string;
     };
-    location: string; // LocationId/LocationName
     status: {
         alive: boolean;
     };
     meta: {
         joinedDay: number;
         lastActionDay: number;
+        gatherFoodCount: number;
+        gatherWoodCount: number;
+        gatherGoldCount: number;
+        collectedFoodCount: number;
+        collectedWoodCount: number;
+        collectedGoldCount: number;
+        exploreCount: number;
+        attackCount: number;
+        attackMonsterCount: number;
+        playerWins: number;
+        playerLosses: number;
+        monsterKilled: number;
+        monsterEscaped: number;
+        attackWinStreak: number;
+        attackLoseStreak: number;
+        attackedCount: number;
     };
 }

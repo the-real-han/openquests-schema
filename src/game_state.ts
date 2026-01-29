@@ -1,3 +1,4 @@
+import { Clan, ClanId } from './clan';
 import { LocationId, LocationState, LocationLog } from './location';
 import { Player } from './player';
 import { WorldLog } from './world_log';
@@ -9,6 +10,7 @@ export interface GameState {
     players: Record<string, Player>;
     worldLog: WorldLog;
     locationLogs: Record<LocationId, LocationLog>;
+    clans: Record<ClanId, Clan>;
 }
 
 // Result of a processed daily tick
