@@ -37,12 +37,11 @@ export interface Player {
         gatherFoodCount: number;
         gatherWoodCount: number;
         gatherGoldCount: number;
-        collectedFoodCount: number;
-        collectedWoodCount: number;
-        collectedGoldCount: number;
+        food: number;
+        wood: number;
+        gold: number;
         exploreCount: number;
         attackCount: number;
-        attackMonsterCount: number;
         playerWins: number;
         playerLosses: number;
         monsterKilled: number;
