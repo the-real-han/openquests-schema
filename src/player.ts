@@ -46,7 +46,8 @@ export interface Player {
         playerWins: number;
         playerLosses: number;
         monsterKilled: number;
-        monsterEscaped: number;
+        bossKilled: number;
+        monsterEncountered: number;
         attackWinStreak: number;
         attackLoseStreak: number;
         attackedCount: number;
