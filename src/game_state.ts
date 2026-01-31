@@ -1,4 +1,6 @@
+import { ActiveBoss } from './boss';
 import { Clan, ClanId } from './clan';
+import { WorldEvent } from './event';
 import { LocationId, LocationState, LocationLog } from './location';
 import { Player } from './player';
 import { WorldLog } from './world_log';
@@ -11,6 +13,8 @@ export interface GameState {
     worldLog: WorldLog;
     locationLogs: Record<LocationId, LocationLog>;
     clans: Record<ClanId, Clan>;
+    worldEvents: WorldEvent[]
+    activeBoss?: ActiveBoss | null
 }
 
 // Result of a processed daily tick
