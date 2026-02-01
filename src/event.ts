@@ -11,7 +11,6 @@ export interface WorldEvent {
     id: string
     type: WorldEventType
     day: number
-    locationId?: string
-    clanId?: string
+    location?: string
     data?: Record<string, any>
 }
