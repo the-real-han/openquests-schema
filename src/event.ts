@@ -1,6 +1,8 @@
 export type WorldEventType =
     | "WEATHER"
     | "INVASION"
+    | "BLESSING"
+    | "CURSE"
     | "BOSS_APPEAR"
     | "BOSS_DEFEATED"
     | "BOSS_FAILED";

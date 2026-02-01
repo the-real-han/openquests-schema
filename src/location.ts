@@ -15,3 +15,27 @@ export interface LocationLog {
     population: number;
     notes?: string[];
 }
+
+export type LocationModifier = {
+    id: string
+    type: "WEATHER" | "INVASION" | "BLESSING" | "CURSE"
+    locationId: string
+    startedOn: number
+
+    effects: {
+        explore?: number        // flat modifier
+        gather?: {
+            food?: number
+            wood?: number
+            gold?: number
+        }
+        fortune?: number        // dice modifier
+        clanResourceLossPct?: {
+            food?: number
+            wood?: number
+            gold?: number
+        }
+    }
+
+    messages: string[]
+}
