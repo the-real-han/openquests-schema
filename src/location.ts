@@ -1,10 +1,11 @@
 import { ClanId } from "./clan";
 
 export type LocationId = string;
-export type LocationName = string; // Alias
+export type LocationName = string;
 
 export interface LocationState {
     id: LocationId;
+    name: LocationName;
     clanId: ClanId;
     description: string;
 }
