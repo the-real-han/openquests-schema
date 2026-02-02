@@ -9,4 +9,9 @@ export interface Clan {
     food: number;
     gold: number;
     defeatedBy: ClanId | null;
+    bonus: {
+        wood?: number;
+        food?: number;
+        gold?: number;
+    }
 }
