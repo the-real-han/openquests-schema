@@ -8,15 +8,19 @@ export interface LocationState {
     name: LocationName;
     clanId: ClanId;
     description: string;
-    history: {
-        day: number;
-        events: LocationModifier[],
-        log: {
-            summary: string;
-            population: number;
-            notes?: string[];
-        }
-    }[];
+    history: LocationHistory[];
+}
+
+export interface LocationHistory {
+    day: number;
+    events: LocationModifier[];
+    log: LocationLog;
+}
+
+export interface LocationLog {
+    summary: string;
+    population: number;
+    notes?: string[];
 }
 
 
