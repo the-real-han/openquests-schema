@@ -13,11 +13,11 @@ export type PlayerClass = typeof PLAYER_CLASSES[number];
 
 export interface PlayerLog {
     day: number;
-    action: {
+    action?: {
         type: ActionType;
         target: string;
     },
-    log: string;
+    summary: string;
 }
 
 
