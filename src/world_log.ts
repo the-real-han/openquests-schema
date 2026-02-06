@@ -1,13 +1,29 @@
-import { WorldEvent } from "./event";
+import { LocationModifier } from "./location";
 
-export interface WorldLog {
-    summary: string;
-    population: number;
-    notes?: string[];
-}
-
-export interface WorldHistory {
+export interface WorldHistoryEntry {
     day: number;
-    events: WorldEvent[],
-    log: WorldLog
+    population: number
+
+    bossEvents: {
+        name: string
+        location: string
+        status: "APPEARED" | "DEFEATED" | "FAILED"
+        message: string
+    }[]
+
+    locationEvents: {
+        type: "WEATHER" | "INVASION" | "BLESSING" | "CURSE"
+        location: string
+        effects: LocationModifier["effects"]
+        message: string
+    }[]
+
+    miscEvents?: {
+        type: string
+        location?: string
+        message?: string
+    }[]
+
+    summary?: string;
+    notes?: string[];
 }

@@ -8,21 +8,28 @@ export interface LocationState {
     name: LocationName;
     clanId: ClanId;
     description: string;
-    history: LocationHistory[];
+    history: LocationHistoryEntry[];
 }
 
-export interface LocationHistory {
-    day: number;
-    events: LocationModifier[];
-    log: LocationLog;
-}
-
-export interface LocationLog {
-    summary: string;
+export interface LocationHistoryEntry {
+    day: number
     population: number;
+    location: string
+    clan: string
+
+    events: {
+        type:
+        | "LOCATION_EVENT"
+        | "CLAN_DEFEATED"
+        | "CLAN_CONQUERED"
+        | "RESOURCE_SURGE"
+        data: Record<string, any>
+        message?: string
+    }[]
+
+    summary?: string;
     notes?: string[];
 }
-
 
 export type LocationModifier = {
     id: string
