@@ -1,3 +1,4 @@
+import { ActionType } from "./action";
 import { ClanId } from "./clan";
 
 export const PLAYER_CLASSES = [
@@ -9,6 +10,16 @@ export const PLAYER_CLASSES = [
 ] as const;
 
 export type PlayerClass = typeof PLAYER_CLASSES[number];
+
+export interface PlayerLog {
+    day: number;
+    action: {
+        type: ActionType;
+        target: string;
+    },
+    log: string;
+}
+
 
 // A player in the system
 export interface Player {
@@ -28,9 +39,7 @@ export interface Player {
         backstory: string;
     };
     message: string;
-    status: {
-        alive: boolean;
-    };
+    history: PlayerLog[],
     meta: {
         joinedDay: number;
         lastActionDay: number;

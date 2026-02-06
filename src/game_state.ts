@@ -1,21 +1,20 @@
 import { ActiveBoss } from './boss';
 import { Clan, ClanId } from './clan';
 import { WorldEvent } from './event';
-import { LocationId, LocationState, LocationLog, LocationModifier } from './location';
+import { LocationId, LocationState, LocationModifier } from './location';
 import { Player } from './player';
-import { WorldLog } from './world_log';
+import { WorldHistory } from './world_log';
 
 // The minimal state required to persist the world
 export interface GameState {
     day: number;
     locations: Record<LocationId, LocationState>;
     players: Record<string, Player>;
-    worldLog: WorldLog;
-    locationLogs: Record<LocationId, LocationLog>;
     clans: Record<ClanId, Clan>;
-    worldEvents: WorldEvent[]
+    activeEvents: WorldEvent[]
     activeBoss?: ActiveBoss | null
-    locationModifiers?: LocationModifier[]
+    activeModifiers?: LocationModifier[]
+    history: WorldHistory[]
 }
 
 // Result of a processed daily tick
