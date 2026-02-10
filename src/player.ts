@@ -58,7 +58,7 @@ export interface Player {
         level: number;
         xp: number;
         clanId: ClanId;
-        titles: string[];
+        titles: Title[];
         backstory: string;
     };
     message: string;
