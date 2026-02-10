@@ -1,6 +1,10 @@
 import { ActionType } from "./action";
 import { ClanId } from "./clan";
 
+export const PLAYER_NAME_MAX_LENGTH = 15;
+export const PLAYER_NAME_MIN_LENGTH = 3;
+export const PLAYER_BACKSTORY_MAX_LENGTH = 200;
+
 export const PLAYER_CLASSES = [
     'Warrior',
     'Lancer',
