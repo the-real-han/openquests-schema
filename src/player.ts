@@ -15,6 +15,25 @@ export const PLAYER_CLASSES = [
 
 export type PlayerClass = typeof PLAYER_CLASSES[number];
 
+export type Title = {
+    id: string,
+    title: string,
+    requirement: {
+        field: string,
+        operator: string,
+        value: number
+    },
+    bonus: {
+        food: number,
+        wood: number,
+        gold: number,
+        xp: number,
+        fortune: number
+    },
+    rank: number,
+    color: string
+}
+
 export interface PlayerLog {
     day: number;
     action?: {
