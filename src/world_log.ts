@@ -7,7 +7,7 @@ export interface WorldHistoryEntry {
     bossEvents: {
         name: string
         location: string
-        status: "APPEARED" | "DEFEATED" | "FAILED"
+        status: "APPEARED" | "DEFEATED" | "DISAPPEARED"
         message: string
     }[]
 

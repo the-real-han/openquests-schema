@@ -23,9 +23,9 @@ export interface LocationHistoryEntry {
         | "CLAN_DEFEATED"
         | "CLAN_CONQUERED"
         | "RESOURCE_SURGE"
-        | "BOSS_APPEAR"
+        | "BOSS_APPEARED"
         | "BOSS_DEFEATED"
-        | "BOSS_FAILED"
+        | "BOSS_DISAPPEARED"
         data: Record<string, any>
         message?: string
     }[]

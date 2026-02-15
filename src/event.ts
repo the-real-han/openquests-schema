@@ -3,9 +3,9 @@ export type WorldEventType =
     | "INVASION"
     | "BLESSING"
     | "CURSE"
-    | "BOSS_APPEAR"
+    | "BOSS_APPEARED"
     | "BOSS_DEFEATED"
-    | "BOSS_FAILED";
+    | "BOSS_DISAPPEARED";
 
 export interface WorldEvent {
     id: string
