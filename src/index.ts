@@ -4,3 +4,4 @@ export * from './location';
 export * from './player';
 export * from './clan';
 export * from './world_log';
+export * from './event';
